@@ -1,6 +1,7 @@
 
 const SLOT_CODE = 'FOC_VIDEO';
-const container = document.createElement('div').classList.add(SLOT_CODE);
+const container = document.createElement('div');
+container.classList.add(SLOT_CODE);
 
 document.body.appendChild(container);
 
