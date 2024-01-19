@@ -13,6 +13,7 @@
     }
 
     addSlotContainer('FOC_VIDEO');
+    addSlotContainer('FOC_ITA_UKR');
 
     loadScript('https://cdn.membrana.media/foc/ym.js');
 
