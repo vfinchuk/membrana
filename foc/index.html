@@ -10,23 +10,49 @@
     <link rel="stylesheet" href="">
 
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script async src="https://cdn.membrana.media/foc/ym.js"></script>
 
     <script>
         window.googletag = window.googletag || { cmd: [] };
         googletag.cmd.push(function () {
-            googletag.defineSlot('/22410059700/TST_2', [480, 320], 'div-gpt-ad-1705673038171-0').addService(googletag.pubads());
+            googletag.defineSlot('/22410059700/TST_2', [1, 1], 'div-gpt-ad-1705701178212-0').addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
+
+            googletag.display('div-gpt-ad-1705701178212-0');
+        });
+    </script>
+
+    <script>
+        /* get file src by postMessage api from gam creative and load this file with ym initialization */
+        const loadScript = (url) => {
+            const script = document.createElement('script');
+            document.head.appendChild(script);
+            script.async = true;
+            script.src = url;
+        };
+
+        const eventMethod = window.addEventListener
+            ? "addEventListener"
+            : "attachEvent";
+
+        const eventListener = window[eventMethod];
+        const messageEvent = eventMethod === "attachEvent"
+            ? "onmessage"
+            : "message";
+
+        const MESSAGE_NAME = 'membrana_ym_init';
+
+        eventListener(messageEvent, (e) => {
+            if (e.data.message === MESSAGE_NAME) {
+                loadScript(e.data.url);
+            }
         });
     </script>
 </head>
 
-<body>
-    <div id='div-gpt-ad-1705673038171-0' style='min-width: 480px; min-height: 320px;'>
-        <script>
-            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1705673038171-0'); });
-        </script>
-    </div>
+<body style="height: 2000px;">
+    <div id='div-gpt-ad-1705701178212-0' style="height: 0;"></div>
 </body>
 
 </html>
