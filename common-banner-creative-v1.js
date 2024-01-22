@@ -25,6 +25,11 @@
     var d = w.document;
     var $$iframe, p;
 
+    var a = 'data-ym-banner';
+    var n = '' + Math.ceil(Math.random() * 100000);
+
+    window.frameElement.setAttribute(a, n);
+
     Array.from(d.getElementsByTagName('iframe')).forEach(function($$i) {
         if ($$i.getAttribute(a) === n) {
             p = $$i.parentElement.parentElement;
