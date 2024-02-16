@@ -32,7 +32,7 @@
 
     Array.from(d.getElementsByTagName('iframe')).forEach(function($$i) {
         if ($$i.getAttribute(a) === n) {
-            p = $$i.parentElement;
+            p = $$i;
             $$iframe = $$i;
         }
     });
