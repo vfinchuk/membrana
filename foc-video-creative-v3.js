@@ -47,7 +47,7 @@
     }
 
     $$iframe.style.setProperty('display', 'none', 'important');
-    var where = 'beforeend';
+    var where = 'afterend';
     p.insertAdjacentHTML(where, '<div class="' + adUnitCode + '"></div>');
 
     var ljs = function(url) {
