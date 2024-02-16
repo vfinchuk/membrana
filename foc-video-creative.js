@@ -25,14 +25,14 @@
     var d = w.document;
     var $$iframe, p;
 
-    var a = 'data-ym-banner';
+    var a = 'data-ym-banner-video';
     var n = '' + Math.ceil(Math.random() * 100000);
 
     window.frameElement.setAttribute(a, n);
 
     Array.from(d.getElementsByTagName('iframe')).forEach(function($$i) {
         if ($$i.getAttribute(a) === n) {
-            p = $$i.parentElement.parentElement;
+            p = $$i.parentElement;
             $$iframe = $$i;
         }
     });
@@ -48,7 +48,6 @@
 
     $$iframe.style.setProperty('display', 'none', 'important');
     var where = 'afterend';
-   
     p.insertAdjacentHTML(where, '<div class="' + adUnitCode + '"></div>');
 
     var ljs = function(url) {
