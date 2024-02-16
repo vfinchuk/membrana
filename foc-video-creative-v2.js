@@ -32,7 +32,7 @@
 
     Array.from(d.getElementsByTagName('iframe')).forEach(function($$i) {
         if ($$i.getAttribute(a) === n) {
-            p = $$i;
+            p = $$i.parentElement;
             $$iframe = $$i;
         }
     });
@@ -47,7 +47,7 @@
     }
 
     $$iframe.style.setProperty('display', 'none', 'important');
-    var where = 'afterend';
+    var where = 'beforeend';
     p.insertAdjacentHTML(where, '<div class="' + adUnitCode + '"></div>');
 
     var ljs = function(url) {
